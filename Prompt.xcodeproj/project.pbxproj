@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C8A88162CAAC21700173500 /* PromptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A88152CAAC21700173500 /* PromptApp.swift */; };
+		8C8A881A2CAAC21900173500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A88192CAAC21900173500 /* Assets.xcassets */; };
+		8C8A881D2CAAC21900173500 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A881C2CAAC21900173500 /* Preview Assets.xcassets */; };
+		8C8A88262CAAC33A00173500 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A88252CAAC33A00173500 /* ContentView.swift */; };
+		8C8A882C2CAAC3A700173500 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A882B2CAAC3A700173500 /* WelcomeViewModel.swift */; };
+		8C8A882E2CAAFDED00173500 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A882D2CAAFDED00173500 /* EditorView.swift */; };
+		8C8A88302CAAFE0100173500 /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A882F2CAAFE0100173500 /* EditorViewModel.swift */; };
+		8C8A88372CAB01AF00173500 /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A88362CAB01AF00173500 /* EditorModel.swift */; };
+		8C9524382CABDD9500DDE025 /* MonacoEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C9524372CABDD9500DDE025 /* MonacoEditor.css */; };
+		8C9524472CAC3A9F00DDE025 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9524462CAC3A9F00DDE025 /* CoreFoundation.framework */; };
+		8CC232CD2CACEFA200068F10 /* Python.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CC232CC2CACEFA200068F10 /* Python.cpp */; };
+		8CC232CF2CAD08CC00068F10 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 8CC232CE2CAD08CC00068F10 /* main.py */; };
+		8CD360782CAD7EA30095898F /* monaco-editor in Resources */ = {isa = PBXBuildFile; fileRef = 8CD360772CAD7EA30095898F /* monaco-editor */; };
+		8CEC9EAF2CAB99F6007B8B4F /* MonacoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC9EAE2CAB99F6007B8B4F /* MonacoEditorView.swift */; };
+		8CEC9EB12CAB9B09007B8B4F /* MonacoEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC9EB02CAB9B09007B8B4F /* MonacoEditor.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C8A88122CAAC21700173500 /* Prompt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prompt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8A88152CAAC21700173500 /* PromptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptApp.swift; sourceTree = "<group>"; };
+		8C8A88192CAAC21900173500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C8A881C2CAAC21900173500 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C8A881E2CAAC21900173500 /* Prompt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Prompt.entitlements; sourceTree = "<group>"; };
+		8C8A88252CAAC33A00173500 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8C8A882B2CAAC3A700173500 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		8C8A882D2CAAFDED00173500 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		8C8A882F2CAAFE0100173500 /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
+		8C8A88362CAB01AF00173500 /* EditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModel.swift; sourceTree = "<group>"; };
+		8C9524372CABDD9500DDE025 /* MonacoEditor.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = MonacoEditor.css; sourceTree = "<group>"; };
+		8C9524462CAC3A9F00DDE025 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8CC232CA2CACEF8C00068F10 /* Python.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Python.hpp; sourceTree = "<group>"; };
+		8CC232CB2CACEFA200068F10 /* Prompt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prompt-Bridging-Header.h"; sourceTree = "<group>"; };
+		8CC232CC2CACEFA200068F10 /* Python.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Python.cpp; sourceTree = "<group>"; };
+		8CC232CE2CAD08CC00068F10 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		8CD360772CAD7EA30095898F /* monaco-editor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "monaco-editor"; sourceTree = "<group>"; };
+		8CEC9EAE2CAB99F6007B8B4F /* MonacoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonacoEditorView.swift; sourceTree = "<group>"; };
+		8CEC9EB02CAB9B09007B8B4F /* MonacoEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = MonacoEditor.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C8A880F2CAAC21700173500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9524472CAC3A9F00DDE025 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C8A88092CAAC21700173500 = {
+			isa = PBXGroup;
+			children = (
+				8C8A88142CAAC21700173500 /* Prompt */,
+				8C8A88132CAAC21700173500 /* Products */,
+				8C9524452CAC3A9F00DDE025 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C8A88132CAAC21700173500 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A88122CAAC21700173500 /* Prompt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C8A88142CAAC21700173500 /* Prompt */ = {
+			isa = PBXGroup;
+			children = (
+				8CD360762CAD7D8B0095898F /* macOS */,
+				8CEC9EB02CAB9B09007B8B4F /* MonacoEditor.html */,
+				8C9524372CABDD9500DDE025 /* MonacoEditor.css */,
+				8CC232CA2CACEF8C00068F10 /* Python.hpp */,
+				8CC232CC2CACEFA200068F10 /* Python.cpp */,
+				8CC232CE2CAD08CC00068F10 /* main.py */,
+				8CD360772CAD7EA30095898F /* monaco-editor */,
+			);
+			path = Prompt;
+			sourceTree = "<group>";
+		};
+		8C8A881B2CAAC21900173500 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A881C2CAAC21900173500 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C8A88242CAAC23B00173500 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A88252CAAC33A00173500 /* ContentView.swift */,
+				8C8A882D2CAAFDED00173500 /* EditorView.swift */,
+				8CEC9EAE2CAB99F6007B8B4F /* MonacoEditorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C8A882A2CAAC39900173500 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A882B2CAAC3A700173500 /* WelcomeViewModel.swift */,
+				8C8A882F2CAAFE0100173500 /* EditorViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		8C8A88332CAB019B00173500 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A88362CAB01AF00173500 /* EditorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C9524452CAC3A9F00DDE025 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C9524462CAC3A9F00DDE025 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CD360762CAD7D8B0095898F /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8C8A88332CAB019B00173500 /* Models */,
+				8C8A882A2CAAC39900173500 /* View Models */,
+				8C8A88242CAAC23B00173500 /* Views */,
+				8C8A88152CAAC21700173500 /* PromptApp.swift */,
+				8C8A88192CAAC21900173500 /* Assets.xcassets */,
+				8C8A881E2CAAC21900173500 /* Prompt.entitlements */,
+				8C8A881B2CAAC21900173500 /* Preview Content */,
+				8CC232CB2CACEFA200068F10 /* Prompt-Bridging-Header.h */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C8A88112CAAC21700173500 /* Prompt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C8A88212CAAC21900173500 /* Build configuration list for PBXNativeTarget "Prompt" */;
+			buildPhases = (
+				8C8A880E2CAAC21700173500 /* Sources */,
+				8C8A880F2CAAC21700173500 /* Frameworks */,
+				8C8A88102CAAC21700173500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prompt;
+			productName = Prompt;
+			productReference = 8C8A88122CAAC21700173500 /* Prompt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C8A880A2CAAC21700173500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					8C8A88112CAAC21700173500 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+				};
+			};
+			buildConfigurationList = 8C8A880D2CAAC21700173500 /* Build configuration list for PBXProject "Prompt" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C8A88092CAAC21700173500;
+			productRefGroup = 8C8A88132CAAC21700173500 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C8A88112CAAC21700173500 /* Prompt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C8A88102CAAC21700173500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CD360782CAD7EA30095898F /* monaco-editor in Resources */,
+				8CEC9EB12CAB9B09007B8B4F /* MonacoEditor.html in Resources */,
+				8C9524382CABDD9500DDE025 /* MonacoEditor.css in Resources */,
+				8C8A881D2CAAC21900173500 /* Preview Assets.xcassets in Resources */,
+				8CC232CF2CAD08CC00068F10 /* main.py in Resources */,
+				8C8A881A2CAAC21900173500 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C8A880E2CAAC21700173500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CEC9EAF2CAB99F6007B8B4F /* MonacoEditorView.swift in Sources */,
+				8C8A882C2CAAC3A700173500 /* WelcomeViewModel.swift in Sources */,
+				8CC232CD2CACEFA200068F10 /* Python.cpp in Sources */,
+				8C8A88262CAAC33A00173500 /* ContentView.swift in Sources */,
+				8C8A88372CAB01AF00173500 /* EditorModel.swift in Sources */,
+				8C8A88302CAAFE0100173500 /* EditorViewModel.swift in Sources */,
+				8C8A88162CAAC21700173500 /* PromptApp.swift in Sources */,
+				8C8A882E2CAAFDED00173500 /* EditorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8C8A881F2CAAC21900173500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C8A88202CAAC21900173500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8C8A88222CAAC21900173500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Prompt/macOS/Prompt.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Prompt/macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = KKYW2L28CB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/",
+				);
+				LIBRARY_SEARCH_PATHS = "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lpython3.12";
+				PRODUCT_BUNDLE_IDENTIFIER = com.productivecenter.Prompt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Prompt/macOS/Prompt-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				SYSTEM_HEADER_SEARCH_PATHS = /Library/Frameworks/Python.framework/Versions/3.12/include/;
+			};
+			name = Debug;
+		};
+		8C8A88232CAAC21900173500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Prompt/macOS/Prompt.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Prompt/macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = KKYW2L28CB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/",
+				);
+				LIBRARY_SEARCH_PATHS = "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lpython3.12";
+				PRODUCT_BUNDLE_IDENTIFIER = com.productivecenter.Prompt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Prompt/macOS/Prompt-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 4.0;
+				SYSTEM_HEADER_SEARCH_PATHS = /Library/Frameworks/Python.framework/Versions/3.12/include/;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C8A880D2CAAC21700173500 /* Build configuration list for PBXProject "Prompt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C8A881F2CAAC21900173500 /* Debug */,
+				8C8A88202CAAC21900173500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C8A88212CAAC21900173500 /* Build configuration list for PBXNativeTarget "Prompt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C8A88222CAAC21900173500 /* Debug */,
+				8C8A88232CAAC21900173500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C8A880A2CAAC21700173500 /* Project object */;
+}

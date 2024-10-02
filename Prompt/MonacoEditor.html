@@ -1,0 +1,25 @@
+<!--                              -->
+<!--MonacoEditor.html             -->
+<!--Prompt                        -->
+<!--                              -->
+<!--Created by MakeThingsSimple on 30/9/2024.-->
+<!--                              -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="MonacoEditor.css">
+        <link rel="stylesheet" href="monaco-editor/package/min/vs/editor/editor.main.css">
+    </head>
+
+    <body>
+        <div id="monaco-editor"></div>
+
+        <script>
+            var require = { paths: { 'vs': 'monaco-editor/package/min/vs' } };
+        </script>
+
+        <script src="monaco-editor/package/min/vs/loader.js"></script>
+        <script src="monaco-editor/package/min/vs/editor/editor.main.js"></script>
+    </body>
+</html>
