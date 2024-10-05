@@ -45,9 +45,11 @@ extension WKPreferences {
 extension EditorView {
     
     class ViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKUIDelegate {
-        var command: String = ""
+        @Published var commandLine: String = ""
+        
         var editor: Model? = nil
         var webView = WKWebView()
+        let ollama = OllamaAPI(at: .init(string: "http://127.0.0.1:11434/api/chat")!)
         
         private let monacoEditorURL = Bundle.main.url(forResource: "MonacoEditor", withExtension: ".html")!
         
@@ -65,7 +67,6 @@ extension EditorView {
             self.webView.navigationDelegate = self
             self.webView.uiDelegate = self
             self.webView.configuration.preferences[WKPreferences.Key.developerExtrasEnabled] = true
-            
         }
         
         func setFileName(fileName: String) {
@@ -75,8 +76,17 @@ extension EditorView {
         func onCommandCommit() {
             // TODO: Add access to functions implemented in main.py
             // TODO: natural language processing
-            print(self.command)
-            PythonInterpreter.runString(self.command)
+            self.ollama.ask(model: .qwen2_0_5b, toRespondTo: self.commandLine) { response in
+                if response.isEmpty  {
+                    return
+                }
+                
+                print(response)
+                
+                DispatchQueue.main.sync {
+                    self.commandLine = response
+                }
+            }
         }
         
         func updateWebView() {

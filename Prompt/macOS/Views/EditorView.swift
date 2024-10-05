@@ -97,7 +97,7 @@ struct EditorView: View {
             .background(.ultraThickMaterial)
             .padding(.horizontal, 5)
             
-            TextField("Type a command to start, e.g. \"save\"", text: $vm.command, onCommit: vm.onCommandCommit)
+            TextField("Type a command to start, e.g. \"save\"", text: $vm.commandLine, onCommit: vm.onCommandCommit)
                 .font(.body.monospaced())
                 .padding(.bottom, 5)
                 .padding(.horizontal, 10)

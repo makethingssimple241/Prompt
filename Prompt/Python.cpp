@@ -8,7 +8,7 @@
 #include "Python.hpp"
 
 #define PY_SSIZE_T_CLEAN
-#include <python3.12/Python.h>
+#include <Python.h>
 
 static const char *s_pythonExceptionWhat[] = {
     [PythonException::ConstructPythonCallableWithNonCallablePyObject] = "Attempted to construct PythonCallable with PyObject which fails callable check",

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C5C49F82CB0EF82008DF026 /* OllamaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C49F72CB0EF82008DF026 /* OllamaAPI.swift */; };
+		8C5C49FA2CB0FB27008DF026 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C49F92CB0FB27008DF026 /* Python.framework */; };
 		8C8A88162CAAC21700173500 /* PromptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A88152CAAC21700173500 /* PromptApp.swift */; };
 		8C8A881A2CAAC21900173500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A88192CAAC21900173500 /* Assets.xcassets */; };
 		8C8A881D2CAAC21900173500 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A881C2CAAC21900173500 /* Preview Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C5C49F72CB0EF82008DF026 /* OllamaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaAPI.swift; sourceTree = "<group>"; };
+		8C5C49F92CB0FB27008DF026 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = ../../../../../Library/Frameworks/Python.framework; sourceTree = "<group>"; };
 		8C8A88122CAAC21700173500 /* Prompt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prompt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8A88152CAAC21700173500 /* PromptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptApp.swift; sourceTree = "<group>"; };
 		8C8A88192CAAC21900173500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5C49FA2CB0FB27008DF026 /* Python.framework in Frameworks */,
 				8C9524472CAC3A9F00DDE025 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +132,7 @@
 		8C9524452CAC3A9F00DDE025 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C5C49F92CB0FB27008DF026 /* Python.framework */,
 				8C9524462CAC3A9F00DDE025 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -143,6 +149,7 @@
 				8C8A881E2CAAC21900173500 /* Prompt.entitlements */,
 				8C8A881B2CAAC21900173500 /* Preview Content */,
 				8CC232CB2CACEFA200068F10 /* Prompt-Bridging-Header.h */,
+				8C5C49F72CB0EF82008DF026 /* OllamaAPI.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 				8CC232CD2CACEFA200068F10 /* Python.cpp in Sources */,
 				8C8A88262CAAC33A00173500 /* ContentView.swift in Sources */,
 				8C8A88372CAB01AF00173500 /* EditorModel.swift in Sources */,
+				8C5C49F82CB0EF82008DF026 /* OllamaAPI.swift in Sources */,
 				8C8A88302CAAFE0100173500 /* EditorViewModel.swift in Sources */,
 				8C8A88162CAAC21700173500 /* PromptApp.swift in Sources */,
 				8C8A882E2CAAFDED00173500 /* EditorView.swift in Sources */,
@@ -369,6 +377,10 @@
 				DEVELOPMENT_TEAM = KKYW2L28CB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,9 +388,7 @@
 					"@executable_path/../Frameworks",
 					"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/",
 				);
-				LIBRARY_SEARCH_PATHS = "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/";
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-lpython3.12";
 				PRODUCT_BUNDLE_IDENTIFIER = com.productivecenter.Prompt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -386,7 +396,7 @@
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				SYSTEM_HEADER_SEARCH_PATHS = /Library/Frameworks/Python.framework/Versions/3.12/include/;
+				SYSTEM_HEADER_SEARCH_PATHS = /Library/Frameworks/Python.framework/Headers/;
 			};
 			name = Debug;
 		};
@@ -405,6 +415,10 @@
 				DEVELOPMENT_TEAM = KKYW2L28CB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,16 +426,14 @@
 					"@executable_path/../Frameworks",
 					"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/",
 				);
-				LIBRARY_SEARCH_PATHS = "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/config-3.12-darwin/";
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-lpython3.12";
 				PRODUCT_BUNDLE_IDENTIFIER = com.productivecenter.Prompt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Prompt/macOS/Prompt-Bridging-Header.h";
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_VERSION = 4.0;
-				SYSTEM_HEADER_SEARCH_PATHS = /Library/Frameworks/Python.framework/Versions/3.12/include/;
+				SYSTEM_HEADER_SEARCH_PATHS = /Library/Frameworks/Python.framework/Headers/;
 			};
 			name = Release;
 		};
