@@ -25,15 +25,24 @@ class OllamaAPI {
         self.url = url
     }
     
-    func ask(model: Model, toRespondTo message: String, withCompletionHandler completionHandler: @escaping (String) -> Void) {
+    func ask(model: Model, withPreprompt preprompt: String? = nil, toRespondTo message: String, withCompletionHandler completionHandler: @escaping (String) -> Void) {
+        var messages: [[String:String]] = []
+        
+        if let preprompt {
+            messages.append([
+                "role": "system",
+                "content": preprompt,
+            ]);
+        }
+        
+        messages.append([
+            "role": "user",
+            "content": message
+        ])
+        
         let body: [String:Any] = [
             "model": model.description,
-            "messages": [
-                [
-                    "role": "user",
-                    "content": message
-                ]
-            ]
+            "messages": messages
         ]
         
         var request = URLRequest(url: self.url)

@@ -41,7 +41,7 @@ struct PromptApp: App {
     
     var body: some Scene {
         WindowGroup {
-            EditorView()
+            ContentView()
         }
     }
 }

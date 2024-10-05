@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C5C49F82CB0EF82008DF026 /* OllamaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C49F72CB0EF82008DF026 /* OllamaAPI.swift */; };
 		8C5C49FA2CB0FB27008DF026 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5C49F92CB0FB27008DF026 /* Python.framework */; };
+		8C83D1992CB147AE002002FC /* preprompt in Resources */ = {isa = PBXBuildFile; fileRef = 8C83D1982CB147AE002002FC /* preprompt */; };
 		8C8A88162CAAC21700173500 /* PromptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A88152CAAC21700173500 /* PromptApp.swift */; };
 		8C8A881A2CAAC21900173500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A88192CAAC21900173500 /* Assets.xcassets */; };
 		8C8A881D2CAAC21900173500 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A881C2CAAC21900173500 /* Preview Assets.xcassets */; };
@@ -20,7 +21,7 @@
 		8C9524382CABDD9500DDE025 /* MonacoEditor.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C9524372CABDD9500DDE025 /* MonacoEditor.css */; };
 		8C9524472CAC3A9F00DDE025 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9524462CAC3A9F00DDE025 /* CoreFoundation.framework */; };
 		8CC232CD2CACEFA200068F10 /* Python.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CC232CC2CACEFA200068F10 /* Python.cpp */; };
-		8CC232CF2CAD08CC00068F10 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 8CC232CE2CAD08CC00068F10 /* main.py */; };
+		8CC232CF2CAD08CC00068F10 /* prompt.py in Resources */ = {isa = PBXBuildFile; fileRef = 8CC232CE2CAD08CC00068F10 /* prompt.py */; };
 		8CD360782CAD7EA30095898F /* monaco-editor in Resources */ = {isa = PBXBuildFile; fileRef = 8CD360772CAD7EA30095898F /* monaco-editor */; };
 		8CEC9EAF2CAB99F6007B8B4F /* MonacoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC9EAE2CAB99F6007B8B4F /* MonacoEditorView.swift */; };
 		8CEC9EB12CAB9B09007B8B4F /* MonacoEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CEC9EB02CAB9B09007B8B4F /* MonacoEditor.html */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		8C5C49F72CB0EF82008DF026 /* OllamaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaAPI.swift; sourceTree = "<group>"; };
 		8C5C49F92CB0FB27008DF026 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = ../../../../../Library/Frameworks/Python.framework; sourceTree = "<group>"; };
+		8C83D1982CB147AE002002FC /* preprompt */ = {isa = PBXFileReference; lastKnownFileType = text; path = preprompt; sourceTree = "<group>"; };
 		8C8A88122CAAC21700173500 /* Prompt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prompt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8A88152CAAC21700173500 /* PromptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptApp.swift; sourceTree = "<group>"; };
 		8C8A88192CAAC21900173500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,7 +46,7 @@
 		8CC232CA2CACEF8C00068F10 /* Python.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Python.hpp; sourceTree = "<group>"; };
 		8CC232CB2CACEFA200068F10 /* Prompt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prompt-Bridging-Header.h"; sourceTree = "<group>"; };
 		8CC232CC2CACEFA200068F10 /* Python.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Python.cpp; sourceTree = "<group>"; };
-		8CC232CE2CAD08CC00068F10 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		8CC232CE2CAD08CC00068F10 /* prompt.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = prompt.py; sourceTree = "<group>"; };
 		8CD360772CAD7EA30095898F /* monaco-editor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "monaco-editor"; sourceTree = "<group>"; };
 		8CEC9EAE2CAB99F6007B8B4F /* MonacoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonacoEditorView.swift; sourceTree = "<group>"; };
 		8CEC9EB02CAB9B09007B8B4F /* MonacoEditor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = MonacoEditor.html; sourceTree = "<group>"; };
@@ -88,7 +90,8 @@
 				8C9524372CABDD9500DDE025 /* MonacoEditor.css */,
 				8CC232CA2CACEF8C00068F10 /* Python.hpp */,
 				8CC232CC2CACEFA200068F10 /* Python.cpp */,
-				8CC232CE2CAD08CC00068F10 /* main.py */,
+				8CC232CE2CAD08CC00068F10 /* prompt.py */,
+				8C83D1982CB147AE002002FC /* preprompt */,
 				8CD360772CAD7EA30095898F /* monaco-editor */,
 			);
 			path = Prompt;
@@ -215,9 +218,10 @@
 			files = (
 				8CD360782CAD7EA30095898F /* monaco-editor in Resources */,
 				8CEC9EB12CAB9B09007B8B4F /* MonacoEditor.html in Resources */,
+				8C83D1992CB147AE002002FC /* preprompt in Resources */,
 				8C9524382CABDD9500DDE025 /* MonacoEditor.css in Resources */,
 				8C8A881D2CAAC21900173500 /* Preview Assets.xcassets in Resources */,
-				8CC232CF2CAD08CC00068F10 /* main.py in Resources */,
+				8CC232CF2CAD08CC00068F10 /* prompt.py in Resources */,
 				8C8A881A2CAAC21900173500 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

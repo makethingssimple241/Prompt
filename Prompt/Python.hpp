@@ -15,6 +15,7 @@ typedef struct _object PyObject;
 class PythonException : public std::runtime_error {
 public:
     enum Type {
+        PyObjectIsNull,
         ConstructPythonCallableWithNonCallablePyObject,
         FailedToRunString,
         UnableToFindFunction,
@@ -31,8 +32,7 @@ public:
     
     operator PyObject *() const { return m_pyObject; }
 protected:
-    PythonObject(PyObject *object, bool shouldDecRef)
-        : m_pyObject(object), m_shouldDecRef(shouldDecRef) {}
+    PythonObject(PyObject *object, bool shouldDecRef);
     
     PyObject *m_pyObject = nullptr;
     bool m_shouldDecRef = false;
@@ -78,16 +78,53 @@ public:
     void append(PyObject *object);
 };
 
+class PythonDictElement {
+public:
+    void operator=(PyObject *object);
+private:
+    PythonDictElement(PyObject *dict, PyObject *key)
+        : m_pyObject(dict), m_key(key) {}
+
+    PyObject *m_pyObject = nullptr, *m_key = nullptr;
+    
+    friend class PythonDict;
+};
+
+class PythonDict : public PythonObject {
+public:
+    PythonDict();
+    PythonDict(PyObject *object, bool shouldDecRef = true);
+    
+    void mergeWith(const PythonDict &dict);
+    
+    PythonDictElement operator[](PyObject *key);
+};
+
+class PythonModule {
+public:
+    PythonModule(const char *moduleName);
+    PythonModule(PyObject *mod);
+    
+    bool import(const char *moduleName);
+    bool importAllFrom(const char *moduleName);
+    PythonObject run(const char *str);
+    
+    PythonDict getDict() const;
+    
+    operator PyObject *() const { return m_module; }
+private:
+    PyObject *m_module;
+    PythonDict m_globals;
+};
+
 class PythonInterpreter {
 public:
     static void initialize(const char *root);
     static void finalize();
     
-    static void runString(const char *string);
-    
-    static PythonCallable getFunction(const char *name);
+    static bool runString(const char *string);
 private:
-    inline static PyObject *s_module;
+    inline static PythonModule *s_module = nullptr;
 };
 
 #endif /* Python_hpp */

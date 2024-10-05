@@ -37,6 +37,7 @@ struct ContentView: View {
         .onAppear {
             let root = Bundle.main.resourcePath!
             PythonInterpreter.initialize(root)
+            PythonInterpreter.runString("about()")
         }
         .onDisappear {
             PythonInterpreter.finalize()
